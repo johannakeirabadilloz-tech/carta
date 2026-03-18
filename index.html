@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta: Para Carlitos de Keiris</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+    background: 
+        url('izquierda.jpeg') left center no-repeat,
+        url('derecha.jpeg') right center no-repeat,
+	url('corazon.jpeg'),
+        linear-gradient(135deg, #f8e1f4, #e1f0ff);
+
+    background-size: 350px auto, 350px auto, cover;
+background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login, .carta {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #ff7eb3;
+    color: white;
+    cursor: pointer;
+}
+
+.carta {
+    display: none;
+    text-align: left;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+h1 {
+    color: #ff4f81;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);} 
+    to {opacity: 1; transform: translateY(0);} 
+}
+@media (max-width: 600px) {
+    body {
+        background: url('corazon.jpeg');
+        background-size: 200px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="login" id="loginBox">
+    <h2>De mí. Para ti</h2>
+    <p>Ingresa la contraseña</p>
+    <input type="password" id="password" placeholder="Contraseña">
+    <br>
+    <button onclick="verificar()">Entrar</button>
+</div>
+
+<!-- CARTA -->
+<div class="carta" id="cartaBox">
+    <h1>Holi corazón de melon 💌</h1>
+    <p>
+No sé exactamente cómo empezar esto… pero sentía que tenía que hacerlo.
+
+A veces hay cosas que se quedan dentro y simplemente necesitan salir,
+no para cambiar el pasado, sino para darle un poco de paz al presente.
+
+Quiero que sepas que lo que vivimos es y será importante para mi.
+No lo digo desde la nostalgia, sino desde la honestidad.
+
+Después de lo que hablamos el lunes, me quedé pensando mucho en nosotros,
+todo lo que vivimos refleja lo importante que eres para mí. Y no es fácil
+poner en palabras todo lo que siento, porque hay muchas emociones
+mezcladas; sin embargo, quiero que sepas que sí veo tu arrepentimiento y
+lo valoro de verdad, en definitiva no es algo que ignore. También quiero
+que sepas que te perdono, porque pase lo que pase no quiero que lo vivido
+se quede con rencor o enojo. Pero al mismo tiempo necesito ser honesta
+conmigo y decirte que aunque te amo y el cariño sigue ahí, algo dentro de
+mí cambió; y no me mal interpretes, esto no significa que haya dejado de
+sentir, sino que ahora hay dudas que antes no estaban y eso me duele también.
+
+No me siento preparada para prometerte una relación en estos momentos.
+Siento que no sería justo ni para ti ni para mí, porque sé que en el fondo
+seguiría procesando lo que pasó, y no quiero que se convierta en algo que
+salga en cada discusión y nos haga daño.
+
+Lo que pasó tuvo un significado importante para mí y necesito tiempo para
+entenderlo, acomodarlo y también entenderme a mí. Me gustaría que ante
+esto pudieras ser consciente de eso y tener empatía con lo que significó
+para mí, más allá de que haya sido un error.
+
+Esto no significa que no te ame o que lo que siento por ti se fue. Al
+contrario, creo que si no sintiera nada sería mucho más fácil. Sin embargo,
+esto me hace cuestionarme cosas que antes estaban claras y es justo por
+esto que no quiero darte falsas esperanzas, ni decirte algo que hoy no
+puedo sostener. Prefiero ser honesta porque te respeto y solo busco que
+dentro de todo esto podamos llevarlo con calma, respeto, cariño, amor y
+con la importancia que tiene nuestra historia.
+
+Así, si el día de mañana no quieres continuar viendo qué ocurre o
+simplemente te aburre, sepas que me lo puedes decir y con el mismo respeto
+y cariño dejamos todo donde alguna vez empezó.
+
+Con cariño,
+Keiris.
+    </p>
+</div>
+
+<script>
+function verificar() {
+    const pass = document.getElementById("password").value;
+
+    if (pass === "1803") {
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("cartaBox").style.display = "block";
+    } else {
+        alert("Contraseña incorrecta");
+    }
+}
+</script>
+
+</body>
+</html>
