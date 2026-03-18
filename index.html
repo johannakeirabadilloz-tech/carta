@@ -77,11 +77,17 @@ p {
     to {opacity: 1; transform: translateY(0);} 
 }
 @media (max-width: 600px) {
-    body {
-        background: url('corazon.jpeg');
-        background-size: 200px;
+body {
+        background: 
+            url('izquierda.jpeg') left center no-repeat,
+            url('derecha.jpeg') right center no-repeat,
+            url('corazones.jpeg'),
+            linear-gradient(135deg, #f8e1f4, #e1f0ff);
+
+        background-size: 80px auto, 80px auto, 150px, cover;
+        background-repeat: no-repeat, no-repeat, repeat, no-repeat;
     }
-}
+}   
 </style>
 
 </head>
